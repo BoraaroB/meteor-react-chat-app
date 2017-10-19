@@ -87,6 +87,9 @@ class App extends Component {
 }
 
 export default createContainer(() => {
+
+  Meteor.subscribe('messages');
+
   return {
     messages: Messages.find({}).fetch(),
   };
